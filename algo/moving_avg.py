@@ -1,9 +1,4 @@
-from typing import List
-
 import pandas as pd
-
-from stock_fetcher.stock_fetcher import StockFetcher
-
 
 
 class MovingAVG:

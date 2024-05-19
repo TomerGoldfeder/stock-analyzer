@@ -1,6 +1,3 @@
-import numpy as np
-import pandas as pd
-
 from algo.get_moving_avg_pos import get_ma_pos
 from st_dashboard.views_generators.technical_indicators_views.generate_ms_pos_graph import generate_ma_pos_graph
 from st_dashboard.views_generators.technical_indicators_views.get_buy_sell_graph import get_buy_sell_graph

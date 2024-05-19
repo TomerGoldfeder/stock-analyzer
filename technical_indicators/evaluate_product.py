@@ -21,6 +21,7 @@ class ProductEvaluator:
         etf_returns = product_data.pct_change().dropna()
         index_returns = index_data.pct_change().dropna()
         return etf_returns, index_returns
+
     def get_tracking_error(self, etf_returns, index_returns, columns: Union[str, list] = 'Close'):
         # Compute tracking error (standard deviation of the difference in returns)
         tracking_error = np.std(etf_returns - index_returns)
@@ -32,9 +33,3 @@ class ProductEvaluator:
         etf_returns, index_returns = self.compute_difference(product_data, index_data)
         tracking_error = self.get_tracking_error(etf_returns, index_returns, columns)
         return tracking_error, etf_returns, index_returns
-
-if __name__ == "__main__":
-    pe = ProductEvaluator("SPY", "GSPC")
-    start_date = "2023-01-01"
-    end_date = "2024-03-05"
-    tracking_error, etf_returns, index_returns = pe.evaluate(start_date, end_date, ['Adj Close', 'Close'])

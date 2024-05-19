@@ -1,5 +1,4 @@
 import streamlit as st
-from prophet_model.stock_model_prophet import StockModelProphet
 from st_dashboard.stock_analysis import stock_analysis
 from st_dashboard.overview import overview
 import streamlit_shadcn_ui as ui

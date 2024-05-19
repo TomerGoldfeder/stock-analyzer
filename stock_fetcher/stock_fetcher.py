@@ -1,12 +1,6 @@
-import investpy.search
 import yfinance as yf
 import pandas as pd
 from yfinance import Ticker
-from finta import TA
-from investpy.utils.search_obj import SearchObj
-
-# import train_test_split from sklearn
-from sklearn.model_selection import train_test_split
 
 
 class StockFetcher():
@@ -41,9 +35,4 @@ class StockFetcher():
         end_date = org_predicted_future_data['ds'].max()
         return self.fetch_data_by_time_range(start_data=start_data,
                                              end_date=end_date)
-
-    @staticmethod
-    def get_sp_500_symbols():
-        return pd.read_csv('/Users/tgoldfeder/PycharmProjects/prophet_project/stock_fetcher/s_p_500.csv')['Symbol'].values.tolist()
-
 

@@ -1,6 +1,4 @@
-import numpy as np
 from snorkel.labeling.model import MajorityLabelVoter, LabelModel
-# import pandas applier from snorkel
 from snorkel.labeling import PandasLFApplier
 
 from technical_indicators.label_model.labeling_functions import get_labeling_functions, apply_lfs
