@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy
 import typing
+from scipy.signal import find_peaks
 
 
 class PeakFinder:
@@ -22,7 +23,6 @@ class PeakFinder:
         return rows['ds']
 
     def get_high_low_peaks(self) -> typing.Tuple[numpy.ndarray, numpy.ndarray]:
-        from scipy.signal import find_peaks
         series = self.stock_data['y']
 
         max_prominence = 0.5
